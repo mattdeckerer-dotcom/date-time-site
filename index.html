@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Date and Time</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #datetime {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click the Button to Show Current Date and Time</h1>
+  <button onclick="showDateTime()">Show Date & Time</button>
+  <div id="datetime"></div>
+
+  <script>
+    function showDateTime() {
+      const now = new Date();
+      const formatted = now.toLocaleString(); // Formats date and time based on user's locale
+      document.getElementById('datetime').textContent = formatted;
+    }
+  </script>
+
+</body>
+</html>
